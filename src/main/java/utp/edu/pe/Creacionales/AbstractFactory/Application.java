@@ -25,7 +25,7 @@ public class Application {
     }
     public static void main(String[] args) {
 
-        System.out.println("Bienvenido a la tienda regalona, te vamos a regalar un conjunto por tener un sistema operativo");
+        System.out.println("Bienvenido a la tienda x regalona, te vamos a regalar un conjunto por tener un sistema operativo");
         String os = System.getProperty("os.name");
         GUIFactory factory;
         Application app;
