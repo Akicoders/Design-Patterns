@@ -1,0 +1,33 @@
+Nose cuantas personas saben sobre base de datos.
+Posiblemente nadie vea este repositorio.
+Pero igual voy a hacer que crear una bd sea un juego de niños. Simplemente sigue los pasos que te voy a decir.
+Paso 1:
+    - Necesitamos una instancia gratuita, rapida y facil de crear.
+    Para eso vamos a usar instagres.
+    https://www.instagres.com/new
+    Listo ya tienes una bd. (dicha bd solo estara disponible solo 1 hora asi que hay que avanzar, igual puedes crear
+    otra para tener otro intento no hay problema).
+
+Paso 2:
+    - Necesitamos conectarnos a ella.
+    Les saldra ustedes que pueden copiar un link.
+    postgresql://neondb_owner:npg_xedsfSFFDSFDv3@ep-tight-thunder-a232dDFGDFvf.eu-north-1.aws.neon.tech/neondb?sslmode=require
+    user: neondb_owner
+    Host: ep-tight-thunder-a232dDFGDFvf.eu-north-1.aws.neon.tech
+    password: npg_xedsfSFFDSFDv3
+    sslmode: require
+    database: neondb
+    Asi se separa o lo que te quiere decir el link
+    Ya ahi solamente lo divides como en el ejemplo y para que pruebes puedes ir al Main.java y usar Database.getInstance()
+
+
+
+
+    Ahora necesito que reemplaces eso en el codigo de Database.java, lee el codigo y reemplaza las variables por las tuyas,
+    con tus datos de tu link.
+
+NOTA IMPORTANTE: Para que no te compliques la vida, este proyecto ya descargo el driver de postgreSQL 42.7.5. que es compatible con
+java 8 en adelante. En este proyecto estoy usando java 22. Asi que no deberia haber problemas con eso.
+
+Paso 3:
+     - Crear tablas
