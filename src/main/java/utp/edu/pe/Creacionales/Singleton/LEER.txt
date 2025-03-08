@@ -1,6 +1,7 @@
 Nose cuantas personas saben sobre base de datos.
 Posiblemente nadie vea este repositorio.
 Pero igual voy a hacer que crear una bd sea un juego de niños. Simplemente sigue los pasos que te voy a decir.
+Recomendacion: Tener conocimiento en base de datos o sino ayudate con IA
 Paso 1:
     - Necesitamos una instancia gratuita, rapida y facil de crear.
     Para eso vamos a usar instagres.
@@ -30,4 +31,49 @@ NOTA IMPORTANTE: Para que no te compliques la vida, este proyecto ya descargo el
 java 8 en adelante. En este proyecto estoy usando java 22. Asi que no deberia haber problemas con eso.
 
 Paso 3:
-     - Crear tablas
+     - Crear tablas y datos 
+     En esta funcion encontraras todo eso
+     add_tables_with_data()
+
+
+
+Paso 4:
+    - Una funcion que contenga las querys
+
+    Hay una funcion que se llama query:
+
+    Ejemplos de lo que puedes poner cuando llames a query
+
+    // 1. Seleccion todos los productos
+    Database.getInstance().query("SELECT * FROM productos");
+
+    // 2. Encuentra los productos con precio mayot a 500 
+    Database.getInstance().query("SELECT nombre, precio FROM productos WHERE precio > 500");
+
+    // 3. Contar productos por categoria
+    Database.getInstance().query("SELECT categoria, COUNT(*) FROM productos GROUP BY categoria");
+
+    // 4. Encontrar el producto mas caro 
+    Database.getInstance().query("SELECT nombre, precio FROM productos ORDER BY precio DESC LIMIT 1");
+
+    // 5. Actualizar un precio de un producto 
+    Database.getInstance().query("UPDATE productos SET precio = 999.99 WHERE nombre = 'Laptop Gaming RGB'");
+
+    // 6. Encontrar productos que contengan 'Gaming'
+    Database.getInstance().query("SELECT * FROM productos WHERE nombre LIKE '%Gaming%'");
+
+    // 7. Calcular el precio promedio de todos los productos 
+    Database.getInstance().query("SELECT AVG(precio) as precio_promedio FROM productos");
+
+    // 8. Elimina un producto
+    Database.getInstance().query("DELETE FROM productos WHERE id = 3");
+
+    // 9. Encuentra los productos creados hoy
+    Database.getInstance().query("SELECT * FROM productos WHERE DATE(fecha_creacion) = CURRENT_DATE");
+
+    // 10. Agrega un nuevo producto
+    Database.getInstance().query("INSERT INTO productos (nombre, precio, categoria) VALUES ('Tablet Pro', 599.99, 'Electrónicos')");
+    
+
+     
+
