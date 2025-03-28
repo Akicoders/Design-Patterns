@@ -18,9 +18,9 @@ public class Main {
     private static final String FILE_PATH = "src"+ File.separator + "main"+ File.separator + "java"+ File.separator +"utp"+ File.separator +"edu"+ File.separator +"pe"+ File.separator +"Estructurales"+ File.separator +"Adapter"+ File.separator +"files"+ File.separator;
 
     public static void main(String[] args) throws FileNotFoundException  {
-        InputFile inputFile = new Csv_Adapter();
+        InputFile inputFile = new Json_Adapter();
         FileAdapter fileAdapter = new FileAdapter(inputFile);
-        InputStream inputStream = new FileInputStream(FILE_PATH + "person.csv");
+        InputStream inputStream = new FileInputStream(FILE_PATH + "person.json");
          List<Person> persons =  fileAdapter.readFile(inputStream);
         persons.forEach(person -> System.out.println(person));
     }
